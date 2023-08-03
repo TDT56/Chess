@@ -15,6 +15,7 @@ starting_board = {
 num_list = [1, 2, 3, 4, 5, 6, 7, 8]
 abc_list = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
 
+# same character length as the piece ▭, ―
 chess_piece_symbols = {
     'r': '♖', 'n': '♘', 'b': '♗', 'q': '♕', 'k': '♔', 'p': '♙',
     'R': '♜', 'N': '♞', 'B': '♝', 'Q': '♛', 'K': '♚', 'P': '♟',}
