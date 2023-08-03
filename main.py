@@ -2,6 +2,7 @@ from var import *
 
 
 def display_board():
+    # this is for a list, a dictionary will be used
     r = ['', '', '', '', '', '', '', '', '']
     board_letters = '       a      b      c      d      e      f      g      h'
     board_line = '    ---------------------------------------------------------'
