@@ -1,4 +1,5 @@
 from var import *
+from functions import *
 
 
 def display_board(board):
@@ -18,5 +19,14 @@ def display_board(board):
         print(board_line)
 
 
+def selecting_chess_piece():
+    """
+    Constraint should still be added to this function.
+    """
+    user_input = input('Select your chess piece location')
+
+
+
 if __name__ == '__main__':
     display_board(starting_board)
+    selecting_chess_piece()
