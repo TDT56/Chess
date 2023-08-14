@@ -11,7 +11,7 @@ def display_board(board):
         for letter in abc_list:
             # The try and except is only when the actual chess icons is used
             try:
-                r2 = f'  {board[letter+num]}   |'
+                r2 = f'  {board[letter+num][0]}   |'
             except KeyError:
                 r2 = f'        |'
             r3 = r3 + r2
