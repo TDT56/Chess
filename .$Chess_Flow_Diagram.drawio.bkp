@@ -1,0 +1,360 @@
+<mxfile host="app.diagrams.net" modified="2023-08-14T06:27:29.864Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="QJsyesMiLd-39OwnEL4W" version="21.6.8" type="device">
+  <diagram name="Page-1" id="h8Ysax5nDg2QYnEPOO9U">
+    <mxGraphModel dx="4963" dy="2660" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="oUvXo52kZNMJ53QjyI-y-1" value="show board" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-525" y="-658" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oUvXo52kZNMJ53QjyI-y-3" value="assign colour to play" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-525" y="-565" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oUvXo52kZNMJ53QjyI-y-4" value="user to select a piece to move" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="595" y="-242" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oUvXo52kZNMJ53QjyI-y-6" value="identifiy piece type" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="595" y="385" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oUvXo52kZNMJ53QjyI-y-7" value="Calculate all the possible moves that won&#39;t result in a check for your own king" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="595" y="76" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--1" value="is it the correct colour" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="595" y="-138" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--3" value="identify the&lt;br&gt;piece type" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="595" y="-21" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--6" value="Will this movement" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="810" y="73" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--7" value="Can it move?" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="595" y="172" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--12" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1008" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--13" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1018" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--31" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-181" y="-172" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--53" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="cz-5jWm3qh7oZavm2D9--32" target="cz-5jWm3qh7oZavm2D9--52" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--32" value="Pawn" style="rounded=1;whiteSpace=wrap;html=1;glass=0;shadow=0;" parent="1" vertex="1">
+          <mxGeometry x="-1475" y="-107" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--76" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="cz-5jWm3qh7oZavm2D9--48" target="cz-5jWm3qh7oZavm2D9--58" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--15" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="cz-5jWm3qh7oZavm2D9--48" target="cz-5jWm3qh7oZavm2D9--59">
+          <mxGeometry x="-0.6614" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--48" value="Is there an enemy pawn(s) next&lt;br&gt;to the pawn" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1252" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--72" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="cz-5jWm3qh7oZavm2D9--49" target="cz-5jWm3qh7oZavm2D9--60" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--74" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="cz-5jWm3qh7oZavm2D9--72" vertex="1" connectable="0">
+          <mxGeometry x="-0.0917" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--73" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="cz-5jWm3qh7oZavm2D9--49" target="cz-5jWm3qh7oZavm2D9--48" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1075" y="141" />
+              <mxPoint x="-1075" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--49" value="Can the pawn take to the left or right?" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1252" y="111" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--64" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="cz-5jWm3qh7oZavm2D9--50" target="cz-5jWm3qh7oZavm2D9--49" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--67" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="cz-5jWm3qh7oZavm2D9--64" vertex="1" connectable="0">
+          <mxGeometry x="-0.0355" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--65" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="cz-5jWm3qh7oZavm2D9--50" target="cz-5jWm3qh7oZavm2D9--62" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--68" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="cz-5jWm3qh7oZavm2D9--65" vertex="1" connectable="0">
+          <mxGeometry x="-0.209" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--50" value="Is the pawn at an edge?" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1252" y="4" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--51" value="Is the forward move into a promotion?" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1701" y="324" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--63" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="cz-5jWm3qh7oZavm2D9--52" target="cz-5jWm3qh7oZavm2D9--50" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--66" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="cz-5jWm3qh7oZavm2D9--63" vertex="1" connectable="0">
+          <mxGeometry x="0.0259" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--71" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="cz-5jWm3qh7oZavm2D9--52" target="cz-5jWm3qh7oZavm2D9--61" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--52" value="Is the space infront of the Pawn open?" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1475" y="4" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--113" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="cz-5jWm3qh7oZavm2D9--55" target="cz-5jWm3qh7oZavm2D9--92" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--16" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="cz-5jWm3qh7oZavm2D9--55" target="cz-5jWm3qh7oZavm2D9--142">
+          <mxGeometry x="-0.3983" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--55" value="Have both Castles been moved?" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-495" y="266" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="cz-5jWm3qh7oZavm2D9--56" target="cz-5jWm3qh7oZavm2D9--59" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--56" value="Enable that take" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="-895" y="4" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="cz-5jWm3qh7oZavm2D9--57" target="cz-5jWm3qh7oZavm2D9--59" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--57" value="Enable en passent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="-1090" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--81" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="cz-5jWm3qh7oZavm2D9--58" target="cz-5jWm3qh7oZavm2D9--57" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--82" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="cz-5jWm3qh7oZavm2D9--58" target="cz-5jWm3qh7oZavm2D9--59" edge="1">
+          <mxGeometry x="-0.5451" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--58" value="Did that/those pawns move 2 spaces in the previous turn?" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1252" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--87" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="cz-5jWm3qh7oZavm2D9--59" target="cz-5jWm3qh7oZavm2D9--86" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--88" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" parent="1" source="cz-5jWm3qh7oZavm2D9--59" target="cz-5jWm3qh7oZavm2D9--85" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--59" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1252" y="713" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--75" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="cz-5jWm3qh7oZavm2D9--60" target="cz-5jWm3qh7oZavm2D9--48" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--60" value="Enable the possible takes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="-1252" y="211" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cz-5jWm3qh7oZavm2D9--61" target="KAhHC3hBZ0RKJo4iH11--7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--61" value="Enable forward move" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="-1475" y="123" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--69" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="cz-5jWm3qh7oZavm2D9--62" target="cz-5jWm3qh7oZavm2D9--56" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--70" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="cz-5jWm3qh7oZavm2D9--69" vertex="1" connectable="0">
+          <mxGeometry x="-0.2148" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--77" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="cz-5jWm3qh7oZavm2D9--62" target="cz-5jWm3qh7oZavm2D9--48" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--62" value="Can the pawn take to the other side?" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1065" y="4" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--145" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="cz-5jWm3qh7oZavm2D9--83" target="cz-5jWm3qh7oZavm2D9--117" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--83" value="King" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-495" y="-105" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--85" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1377" y="869" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--86" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1101" y="869" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--116" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="cz-5jWm3qh7oZavm2D9--89" target="cz-5jWm3qh7oZavm2D9--55" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--125" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="cz-5jWm3qh7oZavm2D9--89" target="cz-5jWm3qh7oZavm2D9--142" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-270" y="195" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--89" value="Has the King moved in this game?" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-495" y="165" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="cz-5jWm3qh7oZavm2D9--90" target="cz-5jWm3qh7oZavm2D9--142">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--90" value="Enable Castling" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="-495" y="688" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--114" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="cz-5jWm3qh7oZavm2D9--92" target="cz-5jWm3qh7oZavm2D9--94" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--17" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="cz-5jWm3qh7oZavm2D9--92" target="cz-5jWm3qh7oZavm2D9--142">
+          <mxGeometry x="-0.5608" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--92" value="Is the King in check?&lt;br&gt;Use KING_CHECK&lt;br&gt;function" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-495" y="367" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--115" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="cz-5jWm3qh7oZavm2D9--93" target="cz-5jWm3qh7oZavm2D9--90" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--19" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="cz-5jWm3qh7oZavm2D9--93" target="cz-5jWm3qh7oZavm2D9--142">
+          <mxGeometry x="-0.7184" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--93" value="Does the King move through a check when trying to castle?" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-495" y="577" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--110" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="cz-5jWm3qh7oZavm2D9--94" target="cz-5jWm3qh7oZavm2D9--93" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--18" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="cz-5jWm3qh7oZavm2D9--94" target="cz-5jWm3qh7oZavm2D9--142">
+          <mxGeometry x="-0.6538" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--94" value="Is there a clear path between the King and a castle that hasn&#39;t moved" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-495" y="469" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--135" value="starting&lt;br&gt;edge&lt;br&gt;only&lt;br&gt;(no corner)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="cz-5jWm3qh7oZavm2D9--117" target="cz-5jWm3qh7oZavm2D9--89" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-436" y="146" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--136" value="a single&lt;br&gt;non-starting&lt;br&gt;edge" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" parent="1" source="cz-5jWm3qh7oZavm2D9--117" target="cz-5jWm3qh7oZavm2D9--142" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-376" y="145.33333333333326" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-393" y="66" />
+              <mxPoint x="-393" y="111" />
+              <mxPoint x="-303" y="111" />
+              <mxPoint x="-303" y="113" />
+              <mxPoint x="-180" y="113" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--137" value="corner" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="cz-5jWm3qh7oZavm2D9--117" target="cz-5jWm3qh7oZavm2D9--143" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-189" y="36" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cz-5jWm3qh7oZavm2D9--117" target="cz-5jWm3qh7oZavm2D9--141">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-61.333333333333485" y="-33.52380952380963" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--2" value="not against any side" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KAhHC3hBZ0RKJo4iH11--1">
+          <mxGeometry x="-0.0229" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--117" value="Where is&lt;br&gt;the King?" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-495" y="6" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--138" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-171" y="-162" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--139" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-161" y="-152" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--26" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cz-5jWm3qh7oZavm2D9--140" target="KAhHC3hBZ0RKJo4iH11--25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--28" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cz-5jWm3qh7oZavm2D9--140" target="KAhHC3hBZ0RKJo4iH11--27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--140" value="Can the King move the these location without resulting into a check?" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-76" y="165" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cz-5jWm3qh7oZavm2D9--141" target="cz-5jWm3qh7oZavm2D9--140">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--141" value="obtain the 9&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;adjacent locations" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-46" y="-49" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cz-5jWm3qh7oZavm2D9--142" target="cz-5jWm3qh7oZavm2D9--140">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--142" value="obtain the 5&lt;br&gt;adjacent locations" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-240" y="165" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cz-5jWm3qh7oZavm2D9--143" target="cz-5jWm3qh7oZavm2D9--140">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cz-5jWm3qh7oZavm2D9--143" value="obtain the 3&lt;br&gt;adjacent locations" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-237" y="6" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KAhHC3hBZ0RKJo4iH11--4" target="KAhHC3hBZ0RKJo4iH11--6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--12" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KAhHC3hBZ0RKJo4iH11--11">
+          <mxGeometry x="-0.0714" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--14" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="KAhHC3hBZ0RKJo4iH11--4" target="cz-5jWm3qh7oZavm2D9--50">
+          <mxGeometry x="-0.865" relative="1" as="geometry">
+            <mxPoint x="-1264" y="76" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--4" value="Is there two spaces open infront of the pawn" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1475" y="331" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--5" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1129" y="-110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="KAhHC3hBZ0RKJo4iH11--6" target="cz-5jWm3qh7oZavm2D9--50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--6" value="Enable a&lt;br&gt;double move" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="-1475" y="434" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--9" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="KAhHC3hBZ0RKJo4iH11--7" target="cz-5jWm3qh7oZavm2D9--50">
+          <mxGeometry x="-0.8147" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--10" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KAhHC3hBZ0RKJo4iH11--7" target="KAhHC3hBZ0RKJo4iH11--4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--7" value="Is the Pawn in his starting row?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1475" y="229" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--25" value="Don&#39;t enable&lt;br&gt;any moves" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-76" y="305" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KAhHC3hBZ0RKJo4iH11--27" value="Enable those&lt;br&gt;moves" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="124" y="165" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
