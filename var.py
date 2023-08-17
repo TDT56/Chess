@@ -44,3 +44,4 @@ board_letters = '       a      b      c      d      e      f      g      h'
 board_line = '   ---------------------------------------------------------'
 
 comments = True
+player = ''
