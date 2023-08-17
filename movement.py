@@ -99,7 +99,7 @@ class PieceMovement:
         self.pieces_movement.rook()
         self.pieces_movement.bishop()
 
-    def pawn():
+    def pawn(self):
         pass
 
 
