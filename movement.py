@@ -34,6 +34,8 @@ class PieceMovement:
                 self.rook()
             elif piece_type == 'Q':
                 print(piece_ids[piece_type])
+                self.rook()
+                self.bishop()
                 pass
             # else King
             else:
@@ -94,7 +96,6 @@ class PieceMovement:
         pass
 
     def bishop(self):
-        print('def bishop')
         # array of cells in a direction relative to the piece
         abc_plus = abc_tup[self.abc_index + 1:]
         abc_minus = list(reversed(abc_tup[0:self.abc_index]))
@@ -107,7 +108,6 @@ class PieceMovement:
             coordinates = abc + str(num)
             print(coordinates)
             if self.calculate_direction_movement(coordinates):
-                print('B1')
                 break
 
         # Stepping in abc-num- direction
@@ -115,7 +115,6 @@ class PieceMovement:
         for abc, num in zip(abc_minus, num_minus):
             coordinates = abc + str(num)
             if self.calculate_direction_movement(coordinates):
-                print('B2')
                 break
 
         # Stepping in abc+num- direction
@@ -123,7 +122,6 @@ class PieceMovement:
         for abc, num in zip(abc_plus, num_minus):
             coordinates = abc + str(num)
             if self.calculate_direction_movement(coordinates):
-                print('B3')
                 break
 
         # Stepping in abc+num+ direction
@@ -131,15 +129,14 @@ class PieceMovement:
         for abc, num in zip(abc_plus, num_plus):
             coordinates = abc + str(num)
             if self.calculate_direction_movement(coordinates):
-                print('B4')
                 break
 
     def king(self):
         pass
 
     def queen(self):
-        self.pieces_movement.rook()
-        self.pieces_movement.bishop()
+        """This function is not required, the rook and bishop functions are used"""
+        pass
 
     def pawn(self):
         pass
