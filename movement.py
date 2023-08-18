@@ -127,30 +127,30 @@ class PieceMovement:
                 break
 
     def king(self):
-        _abc_minus = _num_plus = _abc_plus = _num_minus = False
-        if self.x != 'A':
+        _abc_minus = self.x != abc_tup[0]
+        _num_plus = self.y != str(num_tup[-1])
+        _abc_plus = self.x != abc_tup[-1]
+        _num_minus = self.y != str(num_tup[0])
+
+        if _abc_minus:
             abc_minus = abc_tup[self.abc_index - 1]
             coordinates = abc_minus + self.y
             self.calculate_direction_movement(coordinates)
-            _abc_minus = True
 
-        if self.y != '8':
+        if _num_plus:
             num_plus = str(num_tup[self.num_index + 1])
             coordinates = self.x + num_plus
             self.calculate_direction_movement(coordinates)
-            _num_plus = True
 
-        if self.x != 'H':
+        if _abc_plus:
             abc_plus = abc_tup[self.abc_index + 1]
             coordinates = abc_plus + self.y
             self.calculate_direction_movement(coordinates)
-            _abc_plus = True
 
-        if self.y != '1':
+        if _num_minus:
             num_minus = str(num_tup[self.num_index - 1])
             coordinates = self.x + num_minus
             self.calculate_direction_movement(coordinates)
-            _num_minus = True
 
         if _abc_minus and _num_plus:
             # noinspection PyUnboundLocalVariable
