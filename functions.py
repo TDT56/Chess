@@ -38,3 +38,13 @@ def valid_selection(xy: str, board: dict):
     else:
         print('Invalid Entry!')
     return False
+
+
+def make_lists_equal_length(list1, list2):
+    if len(list1) > len(list2):
+        difference = len(list1) - len(list2)
+        list1 = list1[:-difference]
+    elif len(list2) > len(list1):
+        difference = len(list2) - len(list1)
+        list2 = list2[:-difference]
+    return list1, list2
