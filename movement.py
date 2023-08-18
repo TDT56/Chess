@@ -33,9 +33,11 @@ class PieceMovement:
                 print(piece_ids[piece_type])
                 self.rook()
                 self.bishop()
-            # else King
-            else:
+            elif piece_type == 'K':
                 print(piece_ids[piece_type])
+                self.king()
+            else:
+                print('Well this unexpected in the movement function.')
         else:
             print('Movement function unsuccessful validation selection.')
             # valid_selections already returns a message
@@ -126,7 +128,46 @@ class PieceMovement:
                 break
 
     def king(self):
-        pass
+        _abc_minus = _num_plus = _abc_plus = _num_minus = False
+        if self.x != 'A':
+            abc_minus = abc_tup[self.abc_index - 1]
+            coordinates = abc_minus + self.y
+            self.calculate_direction_movement(coordinates)
+            _abc_minus = True
+
+        if self.y != '8':
+            num_plus = str(num_tup[self.num_index + 1])
+            coordinates = self.x + num_plus
+            self.calculate_direction_movement(coordinates)
+            _num_plus = True
+
+        if self.x != 'H':
+            abc_plus = abc_tup[self.abc_index + 1]
+            coordinates = abc_plus + self.y
+            self.calculate_direction_movement(coordinates)
+            _abc_plus = True
+
+        if self.y != '1':
+            num_minus = str(num_tup[self.num_index - 1])
+            coordinates = self.x + num_minus
+            self.calculate_direction_movement(coordinates)
+            _num_minus = True
+
+        if _abc_minus and _num_plus:
+            # noinspection PyUnboundLocalVariable
+            coordinates = abc_minus + num_plus
+            self.calculate_direction_movement(coordinates)
+        if _abc_minus and _num_minus:
+            # noinspection PyUnboundLocalVariable
+            coordinates = abc_minus + num_minus
+            self.calculate_direction_movement(coordinates)
+        if _abc_plus and _num_minus:
+            # noinspection PyUnboundLocalVariable
+            coordinates = abc_plus + num_minus
+            self.calculate_direction_movement(coordinates)
+        if _abc_plus and _num_plus:
+            coordinates = abc_plus + num_plus
+            self.calculate_direction_movement(coordinates)
 
     def queen(self):
         """This function is not required, the rook and bishop functions are used"""
