@@ -21,14 +21,11 @@ class PieceMovement:
 
             if piece_type == 'P':
                 print(piece_ids[piece_type])
-                pass
             elif piece_type == 'N':
                 print(piece_ids[piece_type])
-                pass
             elif piece_type == 'B':
                 print(piece_ids[piece_type])
                 self.bishop()
-                pass
             elif piece_type == 'R':
                 print(piece_ids[piece_type])
                 self.rook()
@@ -36,14 +33,11 @@ class PieceMovement:
                 print(piece_ids[piece_type])
                 self.rook()
                 self.bishop()
-                pass
             # else King
             else:
                 print(piece_ids[piece_type])
-                pass
         else:
             print('Movement function unsuccessful validation selection.')
-            pass
             # valid_selections already returns a message
 
         # PRINT MOVABLE COORDINATES
