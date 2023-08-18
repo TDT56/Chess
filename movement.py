@@ -31,8 +31,7 @@ class PieceMovement:
                 self.rook()
             elif piece_type == 'Q':
                 print(piece_ids[piece_type])
-                self.rook()
-                self.bishop()
+                self.queen()
             elif piece_type == 'K':
                 print(piece_ids[piece_type])
                 self.king()
@@ -170,8 +169,8 @@ class PieceMovement:
             self.calculate_direction_movement(coordinates)
 
     def queen(self):
-        """This function is not required, the rook and bishop functions are used"""
-        pass
+        self.rook()
+        self.bishop()
 
     def pawn(self):
         pass
