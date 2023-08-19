@@ -129,7 +129,6 @@ class PieceMovement:
                 coordinates = chr(ord(self.x) - 1) + str(num)
                 self.calculate_direction_movement(coordinates)
 
-
     def bishop(self):
         # array of cells in a direction relative to the piece
         abc_plus = abc_tup[self.abc_index + 1:]
@@ -208,7 +207,6 @@ class PieceMovement:
             num_minus = str(num_tup[self.num_index - 1])
             coordinates = self.x + num_minus
             self.calculate_direction_movement(coordinates)
-
 
     def queen(self):
         self.rook()
