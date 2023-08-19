@@ -12,11 +12,11 @@ def selecting_chess_piece():
 
 
 def display_board(board):
-    print(board_letters)
+    print(f'\n{board_letters}')
     print(board_line)
     for num in num_tup[::-1]:
         num = str(num)
-        r3 = num + '  |'
+        r3 = num + ' |'
         for letter in abc_tup:
             # The try and except is only when the actual chess icons is used
             try:
@@ -24,8 +24,9 @@ def display_board(board):
             except IndexError:
                 r2 = f'      |'
             r3 = r3 + r2
-        print(r3)
+        print(f'{r3} {num}')
         print(board_line)
+    print(f'{board_letters}\n')
 
 
 def valid_selection(xy: str, board: dict):
