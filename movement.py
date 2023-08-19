@@ -23,6 +23,7 @@ class PieceMovement:
                 print(piece_ids[piece_type])
             elif piece_type == 'N':
                 print(piece_ids[piece_type])
+                self.knight()
             elif piece_type == 'B':
                 print(piece_ids[piece_type])
                 self.bishop()
@@ -66,29 +67,68 @@ class PieceMovement:
             return True
 
     def rook(self):
-        # Stepping in abc+ direction
+        # Stepping in abc+ direction and breaks when done
         for abc in abc_tup[self.abc_index + 1:]:
             coordinates = abc + self.y
             if self.calculate_direction_movement(coordinates):
                 break
-        # Stepping in abc- direction
+        # Stepping in abc- direction and breaks when done
         for abc in reversed(abc_tup[0:self.abc_index]):
             coordinates = abc + self.y
             if self.calculate_direction_movement(coordinates):
                 break
-        # Stepping in num+ direction
+        # Stepping in num+ direction and breaks when done
         for num in num_tup[self.num_index + 1:]:
             coordinates = self.x + str(num)
             if self.calculate_direction_movement(coordinates):
                 break
-        # Stepping in num- direction
+        # Stepping in num- direction and breaks when done
         for num in reversed(num_tup[0:self.num_index]):
             coordinates = self.x + str(num)
             if self.calculate_direction_movement(coordinates):
                 break
 
     def knight(self):
-        pass
+        # Stepping in abc+ direction
+        if self.x not in ('G', 'H'):
+            abc = abc_tup[self.abc_index + 2]
+            if self.y != '8':
+                coordinates = abc + str(int(self.y) + 1)
+                self.calculate_direction_movement(coordinates)
+            if self.y != '1':
+                coordinates = abc + str(int(self.y)-1)
+                self.calculate_direction_movement(coordinates)
+
+        # Stepping in abc- direction
+        if self.x not in ('A', 'B'):
+            abc = list(reversed(abc_tup[0:self.abc_index-1]))[0]
+            if self.y != '8':
+                coordinates = abc + str(int(self.y) + 1)
+                self.calculate_direction_movement(coordinates)
+            if self.y != '1':
+                coordinates = abc + str(int(self.y) - 1)
+                self.calculate_direction_movement(coordinates)
+
+        # Stepping in num+ direction
+        if self.y not in ('7', '8'):
+            num = num_tup[self.num_index + 1:][1]
+            if self.x != 'A':
+                coordinates = chr(ord(self.x) + 1) + str(num)
+                self.calculate_direction_movement(coordinates)
+            if self.x != 'H':
+                coordinates = chr(ord(self.x) - 1) + str(num)
+                self.calculate_direction_movement(coordinates)
+
+        # Stepping in num+ direction
+        if self.y not in ('1', '2'):
+            num = list(reversed(num_tup[0:self.num_index-1]))[0]
+            if self.x != 'A':
+                coordinates = chr(ord(self.x) + 1) + str(num)
+                self.calculate_direction_movement(coordinates)
+            if self.x != 'H':
+                coordinates = chr(ord(self.x) - 1) + str(num)
+                self.calculate_direction_movement(coordinates)
+
 
     def bishop(self):
         # array of cells in a direction relative to the piece
