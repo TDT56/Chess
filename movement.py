@@ -177,6 +177,15 @@ class PieceMovement:
             coordinates = abc_minus + self.y
             self.calculate_direction_movement(coordinates)
 
+            if _num_plus:
+                # noinspection PyUnboundLocalVariable
+                coordinates = abc_minus + num_plus
+                self.calculate_direction_movement(coordinates)
+            if _num_minus:
+                # noinspection PyUnboundLocalVariable
+                coordinates = abc_minus + num_minus
+                self.calculate_direction_movement(coordinates)
+
         if _num_plus:
             num_plus = str(num_tup[self.num_index + 1])
             coordinates = self.x + num_plus
@@ -187,26 +196,19 @@ class PieceMovement:
             coordinates = abc_plus + self.y
             self.calculate_direction_movement(coordinates)
 
+            if _num_minus:
+                # noinspection PyUnboundLocalVariable
+                coordinates = abc_plus + num_minus
+                self.calculate_direction_movement(coordinates)
+            if _num_plus:
+                coordinates = abc_plus + num_plus
+                self.calculate_direction_movement(coordinates)
+
         if _num_minus:
             num_minus = str(num_tup[self.num_index - 1])
             coordinates = self.x + num_minus
             self.calculate_direction_movement(coordinates)
 
-        if _abc_minus and _num_plus:
-            # noinspection PyUnboundLocalVariable
-            coordinates = abc_minus + num_plus
-            self.calculate_direction_movement(coordinates)
-        if _abc_minus and _num_minus:
-            # noinspection PyUnboundLocalVariable
-            coordinates = abc_minus + num_minus
-            self.calculate_direction_movement(coordinates)
-        if _abc_plus and _num_minus:
-            # noinspection PyUnboundLocalVariable
-            coordinates = abc_plus + num_minus
-            self.calculate_direction_movement(coordinates)
-        if _abc_plus and _num_plus:
-            coordinates = abc_plus + num_plus
-            self.calculate_direction_movement(coordinates)
 
     def queen(self):
         self.rook()
