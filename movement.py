@@ -18,23 +18,18 @@ class PieceMovement:
         """xy: coordinates"""
         if valid_selection(self.xy, self.board):
             piece_type = self.board[self.xy][0].upper()
-
+            print(piece_ids[piece_type])
             if piece_type == 'P':
-                print(piece_ids[piece_type])
+                pass
             elif piece_type == 'N':
-                print(piece_ids[piece_type])
                 self.knight()
             elif piece_type == 'B':
-                print(piece_ids[piece_type])
                 self.bishop()
             elif piece_type == 'R':
-                print(piece_ids[piece_type])
                 self.rook()
             elif piece_type == 'Q':
-                print(piece_ids[piece_type])
                 self.queen()
             elif piece_type == 'K':
-                print(piece_ids[piece_type])
                 self.king()
             else:
                 print('Well this unexpected in the movement function.')
