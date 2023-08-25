@@ -20,7 +20,7 @@ class PieceMovement:
             piece_type = self.board[self.xy][0].upper()
             print(piece_ids[piece_type])
             if piece_type == 'P':
-                pass
+                self.pawn()
             elif piece_type == 'N':
                 self.knight()
             elif piece_type == 'B':
@@ -38,10 +38,13 @@ class PieceMovement:
             # valid_selections already returns a message
 
         # PRINT MOVABLE COORDINATES
-        new_board = empty_board
-        for xy_move in self.movable_coordinates:
-            new_board[xy_move] = 'X'
-        display_board(new_board)
+        if len(self.movable_coordinates) != 0:
+            new_board = empty_board
+            for xy_move in self.movable_coordinates:
+                new_board[xy_move] = 'X'
+            display_board(new_board)
+        else:
+            print('No moves available!')
 
     def calculate_direction_movement(self, coordinates):
         """
@@ -84,6 +87,14 @@ class PieceMovement:
                 break
 
     def knight(self):
+        """
+        The knight is written using 8 modified rook movements.
+        As an example for one of the modified functions:
+        The position of the knight is chosen and an offset on 1 is use from its position.
+        Then the modified rook function is used to move 2 position,
+        but only the section position is used in this case.
+        :return:
+        """
         # Stepping in abc+ direction
         if self.x not in ('G', 'H'):
             abc = abc_tup[self.abc_index + 2]
@@ -114,7 +125,7 @@ class PieceMovement:
                 coordinates = chr(ord(self.x) - 1) + str(num)
                 self.calculate_direction_movement(coordinates)
 
-        # Stepping in num+ direction
+        # Stepping in num- direction
         if self.y not in ('1', '2'):
             num = list(reversed(num_tup[0:self.num_index-1]))[0]
             if self.x != 'A':
@@ -135,7 +146,6 @@ class PieceMovement:
         _abc_minus, _num_plus = make_lists_equal_length(abc_minus, num_plus)
         for abc, num in zip(abc_minus, num_plus):
             coordinates = abc + str(num)
-            print(coordinates)
             if self.calculate_direction_movement(coordinates):
                 break
 
@@ -161,44 +171,44 @@ class PieceMovement:
                 break
 
     def king(self):
-        _abc_minus = self.x != abc_tup[0]
-        _num_plus = self.y != str(num_tup[-1])
-        _abc_plus = self.x != abc_tup[-1]
-        _num_minus = self.y != str(num_tup[0])
+        move_abc_minus = self.x != 'A'
+        move_num_plus = self.y != '8'
+        move_abc_plus = self.x != 'H'
+        move_num_minus = self.y != '1'
 
-        if _abc_minus:
+        if move_abc_minus:
             abc_minus = abc_tup[self.abc_index - 1]
             coordinates = abc_minus + self.y
             self.calculate_direction_movement(coordinates)
 
-        if _num_plus:
+        if move_num_plus:
             num_plus = str(num_tup[self.num_index + 1])
             coordinates = self.x + num_plus
             self.calculate_direction_movement(coordinates)
 
-        if _abc_plus:
+        if move_abc_plus:
             abc_plus = abc_tup[self.abc_index + 1]
             coordinates = abc_plus + self.y
             self.calculate_direction_movement(coordinates)
 
-        if _num_minus:
+        if move_num_minus:
             num_minus = str(num_tup[self.num_index - 1])
             coordinates = self.x + num_minus
             self.calculate_direction_movement(coordinates)
 
-        if _abc_minus and _num_plus:
+        if move_abc_minus and move_num_plus:
             # noinspection PyUnboundLocalVariable
             coordinates = abc_minus + num_plus
             self.calculate_direction_movement(coordinates)
-        if _abc_minus and _num_minus:
+        if move_abc_minus and move_num_minus:
             # noinspection PyUnboundLocalVariable
             coordinates = abc_minus + num_minus
             self.calculate_direction_movement(coordinates)
-        if _abc_plus and _num_minus:
+        if move_abc_plus and move_num_minus:
             # noinspection PyUnboundLocalVariable
             coordinates = abc_plus + num_minus
             self.calculate_direction_movement(coordinates)
-        if _abc_plus and _num_plus:
+        if move_abc_plus and move_num_plus:
             coordinates = abc_plus + num_plus
             self.calculate_direction_movement(coordinates)
 
@@ -207,6 +217,70 @@ class PieceMovement:
         self.bishop()
 
     def pawn(self):
-        pass
+        move_abc_minus = self.x != 'A'
+        move_abc_plus = self.x != 'H'
+        if self.board[self.xy][0].isupper():
+            is_white = True
+        else:
+            is_white = False
 
+        if is_white:
+            num_plus = str(num_tup[self.num_index + 1])
+            coordinates = self.x + num_plus
+            if self.board[coordinates] == self.empty:
+                self.movable_coordinates.append(coordinates)
+                # moving from row 2
+                if self.y == '2':
+                    coordinates = self.x + '4'
+                    # if 2nd open space ahead
+                    if self.board[coordinates] == self.empty:
+                        self.movable_coordinates.append(coordinates)
 
+            # taking pieces to abc minus side
+            if move_abc_minus:
+                abc_minus = abc_tup[self.abc_index - 1]
+                coordinates = abc_minus + num_plus
+
+                is_black = self.board[coordinates][0].islower()
+                if is_black:
+                    self.movable_coordinates.append(coordinates)
+            # taking pieces to abc plus side
+            if move_abc_plus:
+                abc_plus = abc_tup[self.abc_index + 1]
+                coordinates = abc_plus + num_plus
+
+                is_black = self.board[coordinates][0].islower()
+                if is_black:
+                    self.movable_coordinates.append(coordinates)
+
+        # if black
+        else:
+            num_minus = str(num_tup[self.num_index - 1])
+            coordinates = self.x + num_minus
+            if self.board[coordinates] == self.empty:
+                self.movable_coordinates.append(coordinates)
+                # moving from row 2
+                if self.y == '7':
+                    coordinates = self.x + '5'
+                    # if 2nd open space ahead
+                    if self.board[coordinates] == self.empty:
+                        self.movable_coordinates.append(coordinates)
+
+            # taking pieces to abc minus side
+            if move_abc_minus:
+                abc_minus = abc_tup[self.abc_index - 1]
+                coordinates = abc_minus + num_minus
+
+                is_black = self.board[coordinates][0].isupper()
+                if is_black:
+                    self.movable_coordinates.append(coordinates)
+            # taking pieces to abc plus side
+            if move_abc_plus:
+                abc_plus = abc_tup[self.abc_index + 1]
+                coordinates = abc_plus + num_minus
+
+                is_black = self.board[coordinates][0].isupper()
+                if is_black:
+                    self.movable_coordinates.append(coordinates)
+
+        # REMEMBER THE MOVE WHERE YOU TAKE AN EN PASSANT
