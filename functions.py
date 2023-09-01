@@ -1,13 +1,16 @@
 from var import *
 
 
-def selecting_chess_piece():
+def selecting_chess_piece(board):
     """
     Constraint should still be added to this function.
     """
-    x = input('Enter the coordinates of the piece you would like to select: ')
-    x = x[0].upper() + x[1]
-    print(f'{x} - ', end='')
+    while True:
+        x = input('Enter the coordinates of the piece you would like to select: ')
+        x = x[0].upper() + x[1]
+        print(f'{x} - ', end='')
+        if valid_selection(x, board):
+            break
     return x
 
 

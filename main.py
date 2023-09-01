@@ -1,12 +1,13 @@
 from var import *
 from functions import display_board, selecting_chess_piece
-from movement import PieceMovement
+from movement import Movement
 
 
 if __name__ == '__main__':
-    board = testing_board
+    board = starting_board
     player = 'white'
-    display_board(board)
-    xy = selecting_chess_piece()
-    movement = PieceMovement(xy, board)
-    movement.movement()
+    while True:
+        display_board(board)
+        xy = selecting_chess_piece(board)
+        movement = Movement(xy, board)
+        movement.available_moves()

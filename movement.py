@@ -1,9 +1,9 @@
 # replacing function should be used for movement
 from var import *
-from functions import valid_selection, display_board, make_lists_equal_length
+from functions import display_board, make_lists_equal_length
 
 
-class PieceMovement:
+class Movement:
     def __init__(self, xy, board):
         self.xy = xy
         self.board = board
@@ -14,35 +14,32 @@ class PieceMovement:
         self.abc_index = abc_tup.index(self.xy[0])
         self.num_index = num_tup.index(int(self.xy[1]))
 
-    def movement(self):
+    def available_moves(self):
         """xy: coordinates"""
-        if valid_selection(self.xy, self.board):
-            piece_type = self.board[self.xy][0].upper()
-            print(piece_ids[piece_type])
-            if piece_type == 'P':
-                self.pawn()
-            elif piece_type == 'N':
-                self.knight()
-            elif piece_type == 'B':
-                self.bishop()
-            elif piece_type == 'R':
-                self.rook()
-            elif piece_type == 'Q':
-                self.queen()
-            elif piece_type == 'K':
-                self.king()
-            else:
-                print('Well this unexpected in the movement function.')
+        piece_type = self.board[self.xy][0].upper()
+        print(piece_ids[piece_type])
+        if piece_type == 'P':
+            self.pawn()
+        elif piece_type == 'N':
+            self.knight()
+        elif piece_type == 'B':
+            self.bishop()
+        elif piece_type == 'R':
+            self.rook()
+        elif piece_type == 'Q':
+            self.queen()
+        elif piece_type == 'K':
+            self.king()
         else:
-            print('Movement function unsuccessful validation selection.')
-            # valid_selections already returns a message
+            print('Well this unexpected in the movement function.')
 
         # PRINT MOVABLE COORDINATES
+        new_board = empty_board.copy()
         if len(self.movable_coordinates) != 0:
-            new_board = empty_board
             for xy_move in self.movable_coordinates:
                 new_board[xy_move] = 'X'
             display_board(new_board)
+            self.movable_coordinates = []
         else:
             print('No moves available!')
 
