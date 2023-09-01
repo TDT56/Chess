@@ -11,3 +11,5 @@ if __name__ == '__main__':
         xy = selecting_chess_piece(board)
         movement = Movement(xy, board)
         movement.available_moves()
+        movement.move()
+

@@ -14,6 +14,16 @@ class Movement:
         self.abc_index = abc_tup.index(self.xy[0])
         self.num_index = num_tup.index(int(self.xy[1]))
 
+    def move(self):
+        while True:
+            xy = input('Enter the coordinates where you want to move you piece to: ')
+            xy = xy[0].upper() + xy[1]
+            if xy in self.movable_coordinates:
+                break
+            else:
+                print('Wrong entry, try again.')
+        self.board[self.xy], self.board[xy] = self.empty, self.board[self.xy]
+
     def available_moves(self):
         """xy: coordinates"""
         piece_type = self.board[self.xy][0].upper()
@@ -39,7 +49,6 @@ class Movement:
             for xy_move in self.movable_coordinates:
                 new_board[xy_move] = 'X'
             display_board(new_board)
-            self.movable_coordinates = []
         else:
             print('No moves available!')
 
