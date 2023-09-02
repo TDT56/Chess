@@ -6,12 +6,12 @@ def selecting_chess_piece(board):
     Constraint should still be added to this function.
     """
     while True:
-        x = input('Enter the coordinates of the piece you would like to select: ')
-        x = x[0].upper() + x[1]
-        print(f'{x} - ', end='')
-        if valid_selection(x, board):
+        xy = input('Enter the coordinates of the piece you would like to select: ')
+        xy = xy[0].upper() + xy[1]
+        print(f'{xy} - ', end='')
+        if valid_selection(xy, board):
             break
-    return x
+    return xy
 
 
 def display_board(board):
