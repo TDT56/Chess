@@ -131,8 +131,8 @@ class Movement:
         for abc in reversed(abc_tup[0:self.abc_index]):
             coordinates = abc + self.y
             if self.calculate_direction_movement(coordinates):
-
                 break
+
         # Stepping in num+ direction and breaks when done
         for num in num_tup[self.num_index + 1:]:
             coordinates = self.x + str(num)
