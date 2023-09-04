@@ -104,3 +104,16 @@ def make_lists_equal_length(list1: list, list2: list) -> (list, list):
         difference = len(list2) - len(list1)
         list2 = list2[:-difference]
     return list1, list2
+
+
+def update_position_list(board=None, section=None, moved_piece=None, new_coordinates=None, piece_taken=None):
+    if section == 'initialize':
+        for key, value in board.items():
+            if value != '  ':
+                piece_positions.update({value: key})
+    else:
+        piece_positions[moved_piece] = new_coordinates
+        if piece_taken:
+            piece_positions[piece_taken] = 'taken'
+    for item in piece_positions.items():
+        print(item)

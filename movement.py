@@ -61,9 +61,13 @@ class Movement:
                 break
             else:
                 print('Wrong entry, try again.')
-        piece = self.board[self.xy]
-        self.board[self.xy], self.board[xy] = self.empty, piece
-        return piece
+        selected_piece = self.board[self.xy]
+        if self.board[xy] != self.empty:
+            taken_piece = self.board[xy]
+        else:
+            taken_piece = None
+        self.board[self.xy], self.board[xy] = self.empty, selected_piece
+        return selected_piece, taken_piece, xy
 
     def available_moves(self):
         """

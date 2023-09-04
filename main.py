@@ -1,11 +1,12 @@
-from var import *
-from functions import display_board, selecting_chess_piece
+from functions import *
 from movement import Movement
 
 
 if __name__ == '__main__':
     print('Start')
     board = starting_board
+
+    update_position_list(board=board, section='initialize')
     player = 'white'
     while True:
         print('INFO: Display Board')
@@ -19,7 +20,9 @@ if __name__ == '__main__':
         print('INFO: Movement_02')
         if available_move:
             print('INFO: available_move')
-            piece = movement.move()
+            moved_piece, piece_taken, new_xy = movement.move()
+            update_position_list(moved_piece=moved_piece, new_coordinates=new_xy, piece_taken=piece_taken)
+
         print('INFO: End of While Loop')
 
 
