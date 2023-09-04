@@ -32,7 +32,7 @@ class Movement:
         self.abc_index = abc_tup.index(self.xy[0])
         self.num_index = num_tup.index(int(self.xy[1]))
 
-    def move(self) -> None:
+    def move(self) -> str:
         """
         Move a chess piece on the board to a valid destination.
 
@@ -52,7 +52,7 @@ class Movement:
             - The `empty` attribute represents an empty square on the board.
 
         Returns:
-            None
+            Piece name
         """
         while True:
             xy = input('Enter the coordinates where you want to move you piece to: ')
@@ -61,7 +61,9 @@ class Movement:
                 break
             else:
                 print('Wrong entry, try again.')
-        self.board[self.xy], self.board[xy] = self.empty, self.board[self.xy]
+        piece = self.board[self.xy]
+        self.board[self.xy], self.board[xy] = self.empty, piece
+        return piece
 
     def available_moves(self):
         """
@@ -72,7 +74,8 @@ class Movement:
         chessboard's current state and then calls the corresponding piece-specific
         method (e.g., pawn(), knight(), etc.) to calculate the valid moves.
         """
-        piece_type = self.board[self.xy][0].upper()
+        selected_piece = self.board[self.xy]
+        piece_type = selected_piece[0].upper()
         print(piece_ids[piece_type])
         if piece_type == 'P':
             self.pawn()
@@ -88,17 +91,19 @@ class Movement:
             self.king()
         else:
             print('Well this unexpected in the movement function.')
-        self.print_movable_coordinates()
+        return self.print_movable_coordinates()
 
-    def print_movable_coordinates(self):
+    def print_movable_coordinates(self) -> bool:
         """Print the movable coordinates on the chessboard."""
         new_board = empty_board.copy()
         if len(self.movable_coordinates) != 0:
             for xy_move in self.movable_coordinates:
                 new_board[xy_move] = 'X'
             display_board(new_board)
+            return True
         else:
             print('No moves available!')
+            return False
 
     def calculate_direction_movement(self, coordinates):
         """
