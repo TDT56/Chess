@@ -115,5 +115,3 @@ def update_position_list(board=None, section=None, moved_piece=None, new_coordin
         piece_positions[moved_piece] = new_coordinates
         if piece_taken:
             piece_positions[piece_taken] = 'taken'
-    for item in piece_positions.items():
-        print(item)
